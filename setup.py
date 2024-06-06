@@ -1,20 +1,13 @@
 from setuptools import setup
 
-import imp
-
 with open('README.rst') as readme_file:
     README = readme_file.read()
 
 def get_version():
-    ver_file = None
-    try:
-        ver_file, pathname, description = imp.find_module('__version__', ['src/vcstools'])
-        vermod = imp.load_module('__version__', ver_file, pathname, description)
-        version = vermod.version
-        return version
-    finally:
-        if ver_file is not None:
-            ver_file.close()
+    vars = {}
+    with open('src/vcstools/__version__.py') as f:
+        exec(f.read(), vars)
+    return vars['version']
 
 test_required = [
     "nose",
