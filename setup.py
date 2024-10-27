@@ -32,7 +32,7 @@ setup(name='vcstools',
       packages=['vcstools'],
       package_dir={'': 'src'},
       scripts=[],
-      install_requires=['pyyaml', 'python-dateutil'],
+      install_requires=['looseversion', 'pyyaml', 'python-dateutil'],
       # tests_require automatically installed when running python setup.py test
       tests_require=test_required,
       # extras_require allow pip install .[test]

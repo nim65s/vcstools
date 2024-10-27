@@ -43,7 +43,7 @@ import types
 import threading
 import time
 
-from distutils.version import LooseVersion
+from looseversion import LooseVersion
 from vcstools import GitClient
 from vcstools.vcs_base import VcsError
 

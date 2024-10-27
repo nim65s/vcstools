@@ -60,7 +60,7 @@ import shutil
 import tempfile
 import gzip
 import dateutil.parser  # For parsing date strings
-from distutils.version import LooseVersion
+from looseversion import LooseVersion
 import logging
 
 from vcstools.vcs_base import VcsClientBase, VcsError
